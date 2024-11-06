@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             seatsLabel = new Label();
             seatsNumericUpDown = new NumericUpDown();
             requestButton = new Button();
@@ -37,7 +38,7 @@
             // seatsLabel
             // 
             seatsLabel.AutoSize = true;
-            seatsLabel.Location = new Point(43, 36);
+            seatsLabel.Location = new Point(81, 89);
             seatsLabel.Name = "seatsLabel";
             seatsLabel.Size = new Size(69, 15);
             seatsLabel.TabIndex = 0;
@@ -45,7 +46,7 @@
             // 
             // seatsNumericUpDown
             // 
-            seatsNumericUpDown.Location = new Point(43, 54);
+            seatsNumericUpDown.Location = new Point(81, 107);
             seatsNumericUpDown.Maximum = new decimal(new int[] { 150, 0, 0, 0 });
             seatsNumericUpDown.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             seatsNumericUpDown.Name = "seatsNumericUpDown";
@@ -55,7 +56,7 @@
             // 
             // requestButton
             // 
-            requestButton.Location = new Point(59, 83);
+            requestButton.Location = new Point(97, 136);
             requestButton.Name = "requestButton";
             requestButton.Size = new Size(75, 23);
             requestButton.TabIndex = 2;
@@ -69,8 +70,9 @@
             Controls.Add(requestButton);
             Controls.Add(seatsNumericUpDown);
             Controls.Add(seatsLabel);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
-            Text = "Form1";
+            Text = "Tickets Cine";
             ((System.ComponentModel.ISupportInitialize)seatsNumericUpDown).EndInit();
             ResumeLayout(false);
             PerformLayout();

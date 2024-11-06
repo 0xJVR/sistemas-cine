@@ -28,48 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            label1 = new Label();
-            textBox1 = new TextBox();
+            seatsLabel = new Label();
+            seatsNumericUpDown = new NumericUpDown();
+            requestButton = new Button();
+            ((System.ComponentModel.ISupportInitialize)seatsNumericUpDown).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // seatsLabel
             // 
-            button1.Location = new Point(12, 56);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 2;
-            button1.Text = "Pedir";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            seatsLabel.AutoSize = true;
+            seatsLabel.Location = new Point(43, 36);
+            seatsLabel.Name = "seatsLabel";
+            seatsLabel.Size = new Size(69, 15);
+            seatsLabel.TabIndex = 0;
+            seatsLabel.Text = "N. Personas";
             // 
-            // label1
+            // seatsNumericUpDown
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(12, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(69, 15);
-            label1.TabIndex = 3;
-            label1.Text = "N. Personas";
+            seatsNumericUpDown.Location = new Point(43, 54);
+            seatsNumericUpDown.Maximum = new decimal(new int[] { 150, 0, 0, 0 });
+            seatsNumericUpDown.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            seatsNumericUpDown.Name = "seatsNumericUpDown";
+            seatsNumericUpDown.Size = new Size(120, 23);
+            seatsNumericUpDown.TabIndex = 1;
+            seatsNumericUpDown.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
-            // textBox1
+            // requestButton
             // 
-            textBox1.Location = new Point(12, 27);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 4;
-            textBox1.TextChanged += textBox1_TextChanged;
+            requestButton.Location = new Point(59, 83);
+            requestButton.Name = "requestButton";
+            requestButton.Size = new Size(75, 23);
+            requestButton.TabIndex = 2;
+            requestButton.Text = "Pedir";
+            requestButton.UseVisualStyleBackColor = true;
+            requestButton.Click += requestButton_Click;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(textBox1);
-            Controls.Add(label1);
-            Controls.Add(button1);
+            ClientSize = new Size(284, 261);
+            Controls.Add(requestButton);
+            Controls.Add(seatsNumericUpDown);
+            Controls.Add(seatsLabel);
             Name = "Form1";
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)seatsNumericUpDown).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -78,5 +80,8 @@
         private Button button1;
         private Label label1;
         private TextBox textBox1;
+        private Label seatsLabel;
+        private NumericUpDown seatsNumericUpDown;
+        private Button requestButton;
     }
 }
